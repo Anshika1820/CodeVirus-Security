@@ -5,7 +5,7 @@ import digitalforensics from "../assets/Photos/digitalforensics.png";
 import dataloss from "../assets/Photos/dataloss.png";
 import zerosecurity from "../assets/Photos/zerosecurity.png";
 import iot_edge from "../assets/Photos/iot_edge.jpeg";
-import system_sec from "../assets/Photos/System_sec.jpeg";
+import system_sec from "../assets/Photos/system_sec.jpeg";
 import adhaar_sec from "../assets/Photos/adhaar_sec.jpeg";
 import cloud_sec from "../assets/Photos/cloud_sec.jpeg";
 import application_sec from "../assets/Photos/application_sec.jpeg";
