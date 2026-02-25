@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, ShieldCheck, Twitter, Instagram, Linkedin, Facebook } from "lucide-react";
-
+import { MapPin, Phone, Mail, ShieldCheck,X, Instagram, Linkedin, Facebook } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6"; 
+ 
 const Footer = () => {
   const services = [
     { title: "IoT & Edge Security", slug: "iot-edge-security" },
@@ -26,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand + Social */}
@@ -50,16 +51,17 @@ const Footer = () => {
                 href="https://x.com/codevirussec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
+                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300" title="Twitter"
               >
-                <Twitter size={20} />
+                <FaXTwitter size={20} />
               </a>
             
               <a
                 href="https://www.instagram.com/codevirussec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
+                className="text-gray-500 hover:text-[#0b2a5b] transition duration-300" 
+                title="Instagram"
               >
                 <Instagram size={20} />
               </a>
@@ -69,6 +71,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
+                title="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
@@ -78,6 +81,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-[#0b2a5b] transition duration-300"
+                title="Facebook"
               >
                 <Facebook size={20} />
               </a>
@@ -103,7 +107,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#0b2a5b]" />
-                +91 5223153884
+                +91 52231 53884
               </li>
             </ul>
           </div>
@@ -141,7 +145,7 @@ const Footer = () => {
 
           {/* Advanced Services */}
           <div>
-            <h4 className="text-sm font-semibold text-[#0b2a5b] mb-5 uppercase tracking-wide">
+            <h4 className="text-sm font-semibold text-[#071a49] mb-5 uppercase tracking-wide">
               Advanced & Consulting
             </h4>
             <ul className="space-y-3 text-sm text-gray-600">
@@ -157,13 +161,14 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gray-200 mt-16 pt-6 text-center">
-          <p className="text-sm text-gray-700 font-semibold">
+        
+      </div>
+      {/* Bottom */}
+        <div className="border-t border-gray-200 w-full bg-[#0f1f3d] mt-2 p-2">
+          <p className="text-sm text-white font-semibold text-center">
             © {new Date().getFullYear()} Codevirus Security. All Rights Reserved.
           </p>
         </div>
-      </div>
     </footer>
   );
 };
