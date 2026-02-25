@@ -75,7 +75,7 @@ const Navbar = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `flex items-center gap-2 transition ${
-                    isActive ? "text-[#163d82] font-semibold" : ""
+                    isActive ? "text-black font-semibold" : ""
                   }`
                 }
               >
