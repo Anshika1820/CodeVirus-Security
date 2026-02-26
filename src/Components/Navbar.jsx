@@ -51,6 +51,7 @@ const Navbar = () => {
   };
 
   return (
+    <div className="flex items-center justify-between w-full">
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
@@ -58,10 +59,10 @@ const Navbar = () => {
           : "bg-white"
       }`}
     >
-      <nav className="w-full h-16 sm:h-20 flex items-center px-4 sm:px-6">
+      <nav className="max-w-7xl mx-auto h-16 sm:h-20 flex items-center justify-between px-4 sm:px-6">
         
         {/* LOGO */}
-        <NavLink to="/" className="flex items-center gap-2">
+        <NavLink to="/" className="flex items-center gap-2 h-12 sm:h-16 w-auto object-contain min-w-[100px] flex-shrink-0">
           <img
             src={logo}
             alt="Company Logo"
@@ -70,7 +71,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-6 lg:gap-8 ml-8 lg:ml-12 font-medium text-[#0b2a5b] whitespace-nowrap">
+        <ul className="hidden md:flex gap-6 lg:gap-8 mx-8 font-medium text-[#0b2a5b] whitespace-nowrap overflow-hidden">
           {menuItems.map((item) => (
             <li key={item.name}>
               <NavLink
@@ -89,7 +90,7 @@ const Navbar = () => {
         </ul>
 
         {/* RIGHT SIDE DESKTOP */}
-        <div className="ml-auto hidden md:flex items-center gap-4">
+        <div className="ml-auto hidden md:flex items-center gap-4 flex-shrink-0">
           
           {/* Search */}
           <div className="relative flex items-center">
@@ -191,8 +192,10 @@ const Navbar = () => {
         </div>
 
       </div>
+    
     )}
     </header>
+    </div>
   );
 };
 
