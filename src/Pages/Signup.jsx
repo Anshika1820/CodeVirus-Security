@@ -1,23 +1,61 @@
 // src/Pages/Signup.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("User Signup Data:", formData);
-    alert("Signup successful!"); // replace with actual API call
-    setFormData({ name: "", email: "", password: "" });
+    setLoading(true);
+    setError("");
+
+    if (formData.password.length < 8) {
+      setError("Password must be at least 8 characters long.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message || "Signup failed");
+        setLoading(false);
+        return;
+      }
+
+      alert("Signup Successful!!");
+
+      setLoading(false);
+      navigate("/login");
+
+    } catch (err) {
+      console.error("Signup error: ", err);
+      setError("Server error. Please try again.");
+      setLoading(false);
+    }
   };
 
   return (
@@ -26,62 +64,53 @@ const Signup = () => {
         <h1 className="text-3xl font-bold text-[#0b2a5b] text-center mb-6">
           Create an Account
         </h1>
+
         <form onSubmit={handleSubmit} className="space-y-5">
 
-          {/* Name */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="John Doe"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0b2a5b]"
-            />
-          </div>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Full Name"
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl"
+          />
 
-          {/* Email */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="you@example.com"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0b2a5b]"
-            />
-          </div>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email Address"
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl"
+          />
 
-          {/* Password */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="********"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0b2a5b]"
-            />
-          </div>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl"
+          />
 
-          {/* Submit Button */}
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+
           <button
             type="submit"
-            className="w-full bg-[#0b2a5b] hover:bg-[#071a36] text-white font-semibold py-3 rounded-xl shadow transition"
+            disabled={loading}
+            className="w-full bg-[#0b2a5b] text-white py-3 rounded-xl"
           >
-            Sign Up
+            {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
 
-        <p className="text-sm text-gray-600 text-center mt-6">
+        <p className="text-sm text-center mt-6">
           Already have an account?{" "}
-          <Link to="/login" className="text-[#0b2a5b] hover:text-[#071a36] font-medium">
+          <Link to="/login" className="text-[#0b2a5b] font-medium">
             Login
           </Link>
         </p>
