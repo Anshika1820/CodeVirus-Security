@@ -14,12 +14,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden -mt-[30px]">
+    <div className="overflow-hidden ">
       
       {/* ================= HERO SECTION ================= */}
       <section
         id="home"
-        className="relative min-h-screen flex items-start pt-20 
+        className="relative h-auto lg:min-h-[85vh] flex items-start pt-16 lg:pt-20 pb-16 lg:pb-24
         bg-[linear-gradient(120deg,#ffffff_55%,#0b2a5b_45%)]"
       >
         {/* Background Effects */}
@@ -213,4 +213,4 @@ const ServiceCard = ({ image, title, description, link }) => (
       </Link>
     </div>
   </div>
-);
+);  
