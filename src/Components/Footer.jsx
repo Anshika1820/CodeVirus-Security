@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, ShieldCheck,X, Instagram, Linkedin, Facebook } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6"; 
+import logo from "../assets/Photos/logo2.png";
  
 const Footer = () => {
   const services = [
@@ -27,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand + Social */}
@@ -38,12 +39,13 @@ const Footer = () => {
                 Codevirus Security
               </h3>
             </div>
-
+    
             <p className="text-sm text-gray-600 leading-relaxed">
               Securing your digital assets with enterprise-grade cybersecurity solutions,
               compliance services, and threat management.
             </p>
 
+            
             {/* Social Icons */}
             <div className="flex items-center gap-5 mt-6">
             
@@ -87,6 +89,10 @@ const Footer = () => {
               </a>
             
             </div>
+            <div className="flex items-center gap-5 mt-6">
+              <p className="text-sm text-gray-600 font-semibold mb-3">Recognized Partner</p>
+            </div>
+            <img src={logo} alt="" className="w-27 h-25 align-center" />
           </div>
           {/* Contact */}
           <div>
@@ -107,7 +113,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#0b2a5b]" />
-                +91 52231 53884
+                052231 53884
               </li>
             </ul>
           </div>
