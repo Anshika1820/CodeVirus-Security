@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden -mt-[30px]">
       
       {/* ================= HERO SECTION ================= */}
       <section
