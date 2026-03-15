@@ -48,18 +48,9 @@ export default function TeamPage2() {
 
             {/* Unified Badge Style */}
             <div className="mt-6 flex justify-center gap-3 flex-wrap">
-              {[
-                "Advisors & Senior Experts",
-                "25+ Years Experience",
-                "Enterprise Technology Leader",
-              ].map((item, index) => (
-                <span
-                  key={index}
-                  className="bg-[#0B1C2D] text-white text-xs md:text-sm px-5 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
-                >
-                  {item}
-                </span>
-              ))}
+              <span className="bg-[#0B1C2D] text-white text-xs md:text-sm px-5 py-2 rounded-full shadow-md">
+                Advisors & Senior Experts
+              </span>
             </div>
           </div>
 
@@ -111,18 +102,15 @@ export default function TeamPage2() {
 
           {/* Navigation Buttons */}
           <div className="mt-16 flex justify-center gap-6">
-            <Link  
-              to="/tp1">
-            <button className="bg-gray-200 text-gray-800 px-8 py-3 text-sm rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
-              ← Previous
-            </button>
+            <Link to="/tp1">
+              <button className="bg-gray-200 text-gray-800 px-8 py-3 text-sm rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
+                ← Previous
+              </button>
             </Link>
-            <Link 
-             to="/tp3">
-
-            <button className="bg-[#0B1C2D] text-white px-10 py-3 text-sm rounded-full hover:bg-[#102a44] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-              Next →
-            </button>
+            <Link to="/tp3">
+              <button className="bg-[#0B1C2D] text-white px-10 py-3 text-sm rounded-full hover:bg-[#102a44] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                Next → 
+              </button>
             </Link>
           </div>
 
