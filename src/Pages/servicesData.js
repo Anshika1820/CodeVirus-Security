@@ -20,7 +20,7 @@ import iot_and_edge_security from "../assets/Photos/iot_and_edge_security.png";
 import it_security_audit from "../assets/Photos/it_security_audit.png";
 import forensic_investigation_and_audit from "../assets/Photos/forensic_investigation_and_audit.png";
 import networking_audit from "../assets/Photos/networking_audit.png";
-const servicesData = [
+export const servicesData = [
     {
         id: 1,
         title: "Cybersecurity Operations Centers",
