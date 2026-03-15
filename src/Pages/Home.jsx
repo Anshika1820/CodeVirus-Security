@@ -84,7 +84,7 @@ const Home = () => {
           bg-gradient-to-b from-[#0b2a5b] to-[#071a36]
           rounded-3xl
           
-          p-6 sm:p-8 lg:p-10
+          p-6 sm:p-8 lg:p-10 h-8
           
           text-slate-200
           shadow-[0_40px_80px_rgba(7,26,54,0.6)]
