@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
 import ServicesDetails from "./Pages/ServicesDetails";
+import servicesData from "./Pages/servicesData";
 import About from "./Pages/About";
 import Footer from "./Components/Footer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
@@ -33,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services-details" element={<ServicesDetails />} />
+          <Route path="/services/:id" element={<ServicesDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsCondition/>} />
@@ -50,7 +51,7 @@ function App() {
           <Route path="/tp4" element={<Page4/>} />
           <Route path="/tp5" element={<Page5/>} />
           <Route path="/tp6" element={<Page6/>} />
-
+          <Route path="/servicesData" element={<servicesData/>} />
             
 
         </Routes>
