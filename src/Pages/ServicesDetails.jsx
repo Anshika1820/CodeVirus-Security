@@ -33,7 +33,6 @@ const ServiceDetail = () => {
         };
         return icons[iconName] || HiShieldCheck;
     };
-
     if (!service) {
         return (
             <div className="pt-32 pb-16 min-h-screen flex items-center justify-center">
