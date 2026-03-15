@@ -29,34 +29,31 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto 
         px-4 sm:px-6 
         grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] 
-        gap-12 lg:gap-16">
+        gap-12 lg:gap-16 ">
 
           {/* LEFT CONTENT */}
           <div
-            className={`transition-all duration-1000 ${
+            className={`transition-all duration-1000${
               active
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <span className="inline-block mb-3 px-5 py-2 rounded-full bg-[#e8eef8] text-[#0b2a5b] font-semibold text-xs sm:text-sm">
+            <span className="inline-block mb-3 px-5 py-2 rounded-full bg-white text-[#0b2a5b] shadow-md shadow-[#0b2a5b] font-semibold text-xs sm:text-sm">
               Enterprise Cybersecurity Solutions
             </span>
 
             <h1 className="font-black leading-tight mb-7">
-              <span className="block text-3xl sm:text-4xl lg:text-5xl text-slate-900">
-                Welcome to
+              <span className="block text-3xl sm:text-4xl lg:text-5xl text-gray-700  font-sans">
+                Protect your <br />  internal and <br /> external
               </span>
               <span className="block text-[#0b2a5b] text-2xl sm:text-3xl lg:text-4xl">
-                CODEVIRUS SECURITY
+                network from <br /> unauthorized <br />access and <br /> attacks
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-700 max-w-xl mb-8 leading-relaxed">
-              We protect your network with layered security, combining
-              next-generation firewalls, intrusion prevention systems,
-              secure access controls, and zero-trust principles to defend
-              modern enterprises against evolving cyber threats.
+              We design and secure enterprise-grade networks using firewalls, IDS/IPS, VPNs, and zero-trust principles to prevent breaches and data leaks.
             </p>
 
             {/* Buttons */}
@@ -84,13 +81,13 @@ const Home = () => {
 
           {/* RIGHT PANEL */}
           <div
-            className={`transition-all duration-1000 delay-150 ${
+            className={`transition-all duration-1000 delay-150 container h-80 ${
               active
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-12"
             } 
             bg-gradient-to-b from-[#0b2a5b] to-[#071a36] 
-            rounded-3xl p-6 sm:p-8 lg:p-12 
+            rounded-3xl p- sm:p-8 lg:p-12 mt-30
             text-slate-200 
             shadow-[0_40px_80px_rgba(7,26,54,0.6)]`}
           >
@@ -126,50 +123,55 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-14">
-            <span className="text-xs sm:text-sm uppercase tracking-widest text-[#163d82] font-semibold">
-              Our Services
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0b2a5b] mt-3   ">
+              Comprehensive Cybersecurity Operations Center
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0b2a5b] mt-3">
-              Enterprise Security Solutions
+            <h2 className="text-xs sm:text-sm uppercase tracking-widest text-[#163d82] font-semibold">
+              We provide advanced cybersecurity solutions to protect your digital assets and ensure business continuity.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" >
 
             <ServiceCard
-              image={networksecurity}
-              title="Network Security"
-              description="Protect enterprise networks from internal and external cyber threats."
-              link="/services?service=network-security"
+              title="Cybersecurity Operations Centers"
+              description="A centralized unit for monitoring, detecting, and responding to cybersecurity threats."
             />
 
             <ServiceCard
-              image={digitalforensics}
-              title="Digital Forensics"
-              description="Investigate cyber incidents and securely collect digital evidence."
-              link="/services?service=digital-forensics"
+              title="Incident Response And Management"
+              description="Rapid response strategies to identify, contain, and recover from cyber incidents."
             />
 
             <ServiceCard
-              image={dataloss}
-              title="Data Loss Prevention (DLP)"
-              description="Safeguard sensitive business data from unauthorized exposure."
-              link="/services?service=data-loss-prevention-dlp"
+              title="Incident Response Plans And Procedures"
+              description="Well-defined response plans to minimize damage during security breaches."
             />
 
+            <ServiceCard
+              title="Integrating Threat Intelligence"
+              description="Combining threat intelligence feeds for proactive security defense."
+            />
+      
+            <ServiceCard
+              title="Role Of Security Analysts In CSOC"
+              description="Expert analysts monitoring systems and investigating threats.."
+            />
+
+            <ServiceCard
+              title="Challenges In Staffing & Retaining Talent"
+              description="Strategies to recruit and retain skilled cybersecurity professionals."
+            />
+            
           </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/services"
-              className="inline-block bg-[#163d82] text-white 
-              px-6 py-3 rounded-lg font-semibold 
-              hover:bg-[#0b2a5b] transition"
+           <div className="text-center mt-12">
+            <a
+              href="/services"
+              className="px-4 py-3 bg-[#0b2a5b] text-white rounded font-semibold hover:bg-[#081c3a] transition"
             >
               View All Services
-            </Link>
+            </a>
           </div>
-
         </div>
       </section>
 
@@ -186,17 +188,9 @@ export default Home;
 
 const ServiceCard = ({ image, title, description, link }) => (
   <div className="bg-white border border-slate-200 rounded-2xl 
-  overflow-hidden shadow-sm hover:shadow-lg 
-  transition-all duration-300 flex flex-col group">
+  overflow-hidden shadow-sm hover:shadow-lg shadow-[#0b2a5b]
+  transition-all duration-300 flex flex-col group ">
 
-    <div className="relative w-full aspect-[16/9] bg-slate-100 overflow-hidden">
-      <img
-        src={image}
-        alt={title}
-        className="absolute inset-0 w-full h-full object-cover 
-        transition duration-500 group-hover:scale-105"
-      />
-    </div>
 
     <div className="p-6 flex flex-col flex-grow">
       <h3 className="text-lg font-semibold text-[#0b2a5b] mb-3">
@@ -205,12 +199,7 @@ const ServiceCard = ({ image, title, description, link }) => (
       <p className="text-slate-600 text-sm leading-relaxed mb-6">
         {description}
       </p>
-      <Link
-        to={link}
-        className="mt-auto text-sm font-semibold text-[#163d82] hover:text-[#0b2a5b]"
-      >
-        View More →
-      </Link>
+      
     </div>
   </div>
 );  
