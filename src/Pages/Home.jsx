@@ -1,10 +1,8 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import About from "./About";
 import Project from "./Project";
-import networksecurity from "../assets/Photos/network.png";
-import digitalforensics from "../assets/Photos/digitalforensics.png";
-import dataloss from "../assets/Photos/dataloss.png";
 
 const Home = () => {
   const [active, setActive] = useState(false);
@@ -14,10 +12,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden ">
-      
-      {/* ================= HERO SECTION ================= */}
-      <section
+    <div className="overflow-hidden">
+       <section
         id="home"
         className="relative h-auto lg:min-h-[85vh] flex items-start pt-16 lg:pt-20 pb-16 lg:pb-24
         bg-[linear-gradient(120deg,#ffffff_55%,#0b2a5b_45%)]"
@@ -33,27 +29,28 @@ const Home = () => {
 
           {/* LEFT CONTENT */}
           <div
-            className={`transition-all duration-1000${
-              active
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`transition-all duration-1000${active
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
             <span className="inline-block mb-3 px-5 py-2 rounded-full bg-white text-[#0b2a5b] shadow-md shadow-[#0b2a5b] font-semibold text-xs sm:text-sm">
               Enterprise Cybersecurity Solutions
             </span>
 
             <h1 className="font-black leading-tight mb-7">
-              <span className="block text-3xl sm:text-4xl lg:text-5xl text-gray-700  font-sans">
-                Protect your <br />  internal and <br /> external
+              <span className="block text-3xl sm:text-4xl lg:text-5xl text-gray-700 font-sans">
+                Enterprise-grade <br /> cybersecurity <br /> solutions
               </span>
+
               <span className="block text-[#0b2a5b] text-2xl sm:text-3xl lg:text-4xl">
-                network from <br /> unauthorized <br />access and <br /> attacks
+                designed to protect <br /> networks, systems, <br /> and sensitive data <br />
+                from unauthorized access, <br /> cyber attacks, <br /> and security breaches
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-700 max-w-xl mb-8 leading-relaxed">
-              We design and secure enterprise-grade networks using firewalls, IDS/IPS, VPNs, and zero-trust principles to prevent breaches and data leaks.
+              We provide advanced cybersecurity services including Vulnerability Assessment, Penetration Testing, Network Security, and Security Operations Center (SOC) monitoring. Our goal is to identify security weaknesses, prevent attacks, and ensure your organization remains protected against evolving cyber threats.
             </p>
 
             {/* Buttons */}
@@ -80,58 +77,75 @@ const Home = () => {
           </div>
 
           {/* RIGHT PANEL */}
-          <div
-            className={`transition-all duration-1000 delay-150 container h-80 ${
-              active
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-12"
-            } 
-            bg-gradient-to-b from-[#0b2a5b] to-[#071a36] 
-            rounded-3xl p- sm:p-8 lg:p-12 mt-30
-            text-slate-200 
-            shadow-[0_40px_80px_rgba(7,26,54,0.6)]`}
-          >
-            <h3 className="text-xl sm:text-2xl font-bold mb-6">
-              Why Enterprises Choose Us
-            </h3>
+        <div
+          className={`transition-all duration-1000 delay-150
+          ${active ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}
+          
+          bg-gradient-to-b from-[#0b2a5b] to-[#071a36]
+          rounded-3xl
+          
+          p-6 sm:p-8 lg:p-10
+          
+          text-slate-200
+          shadow-[0_40px_80px_rgba(7,26,54,0.6)]
+          
+          mt-10 lg:mt-20
+          min-h-[420px]
+          `}
+        >
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">
+            Why Enterprises Choose Us
+          </h3>
 
-            <ul className="space-y-4 text-slate-300 text-sm sm:text-base">
-              <li className="flex gap-3">
-                <span className="text-[#60a5fa]">✔</span>
-                Zero-Trust Network Architecture
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#60a5fa]">✔</span>
-                Advanced Threat Intelligence
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#60a5fa]">✔</span>
-                24/7 Monitoring & Incident Response
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#60a5fa]">✔</span>
-                Global Compliance & Risk Standards
-              </li>
-            </ul>
-          </div>
+          <ul className="space-y-5 sm:space-y-6 text-sm sm:text-base lg:text-lg text-slate-300">
 
+            <li className="flex items-start gap-3">
+              <span className="text-[#60a5fa] text-lg sm:text-xl">✔</span>
+              Advanced Vulnerability Assessment & Penetration Testing
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#60a5fa] text-lg sm:text-xl">✔</span>
+              24/7 Security Monitoring & Threat Detection
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#60a5fa] text-lg sm:text-xl">✔</span>
+              Network Security & Firewall Protection
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="text-[#60a5fa] text-lg sm:text-xl">✔</span>
+              Compliance, Risk Management & Security Audits
+            </li>
+
+          </ul>
+        </div>
         </div>
       </section>
 
+
       {/* ================= SERVICES SECTION ================= */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+
         <div className="max-w-7xl mx-auto">
 
+          {/* Heading */}
           <div className="text-center mb-14">
-            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0b2a5b] mt-3   ">
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0b2a5b] mb-3">
               Comprehensive Cybersecurity Operations Center
-            </span>
-            <h2 className="text-xs sm:text-sm uppercase tracking-widest text-[#163d82] font-semibold">
-              We provide advanced cybersecurity solutions to protect your digital assets and ensure business continuity.
             </h2>
+
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+              We provide advanced cybersecurity solutions to protect your
+              digital assets and ensure business continuity.
+            </p>
+
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" >
+          {/* Services Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <ServiceCard
               title="Cybersecurity Operations Centers"
@@ -152,31 +166,35 @@ const Home = () => {
               title="Integrating Threat Intelligence"
               description="Combining threat intelligence feeds for proactive security defense."
             />
-      
+
             <ServiceCard
               title="Role Of Security Analysts In CSOC"
-              description="Expert analysts monitoring systems and investigating threats.."
+              description="Expert analysts monitoring systems and investigating threats."
             />
 
             <ServiceCard
               title="Challenges In Staffing & Retaining Talent"
               description="Strategies to recruit and retain skilled cybersecurity professionals."
             />
-            
+
           </div>
-           <div className="text-center mt-12">
-            <a
-              href="/services"
-              className="px-4 py-3 bg-[#0b2a5b] text-white rounded font-semibold hover:bg-[#081c3a] transition"
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="px-6 py-3 bg-[#0b2a5b] text-white rounded-lg font-semibold hover:bg-[#081c3a] transition"
             >
               View All Services
-            </a>
+            </Link>
           </div>
+
         </div>
       </section>
 
+      {/* Other Sections */}
       <About />
       <Project preview={true} />
+
     </div>
   );
 };
@@ -184,22 +202,23 @@ const Home = () => {
 export default Home;
 
 
-/* ================= Reusable Service Card ================= */
+/* ================= SERVICE CARD ================= */
 
-const ServiceCard = ({ image, title, description, link }) => (
-  <div className="bg-white border border-slate-200 rounded-2xl 
-  overflow-hidden shadow-sm hover:shadow-lg shadow-[#0b2a5b]
-  transition-all duration-300 flex flex-col group ">
+const ServiceCard = ({ title, description }) => (
+  <div
+    className="bg-white border border-slate-200 rounded-2xl
+    p-6 shadow-sm hover:shadow-xl
+    transition-all duration-300 group"
+  >
 
+    <h3 className="text-lg font-semibold text-[#0b2a5b] mb-3">
+      {title}
+    </h3>
 
-    <div className="p-6 flex flex-col flex-grow">
-      <h3 className="text-lg font-semibold text-[#0b2a5b] mb-3">
-        {title}
-      </h3>
-      <p className="text-slate-600 text-sm leading-relaxed mb-6">
-        {description}
-      </p>
-      
-    </div>
+    <p className="text-slate-600 text-sm leading-relaxed">
+      {description}
+    </p>
+
   </div>
-);  
+);
+
