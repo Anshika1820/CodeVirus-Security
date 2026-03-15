@@ -65,12 +65,12 @@ const About = () => {
     <div className="bg-white text-gray-900">
 
       {/* HERO SECTION */}
-      <section className="py-32 px-6 bg-[#f4f6fa]">
+      <section className="py-16 px-6 bg-[#f4f6fa]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
           <div className={`transition-all duration-1000 ${active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
-            <span className="inline-block mb-4 px-4 py-2 bg-blue-100 bg-white text-[#0b2a5b] shadow-md shadow-[#0b2a5b] font-semibold rounded-full text-sm">
+            <span className="inline-block mb-4 px-4 py-2 bg-blue-100 text-[#0b2a5b] font-semibold rounded-full text-sm">
               ABOUT CODEVIRUSSECURITY
             </span>
 
@@ -88,13 +88,13 @@ const About = () => {
 
           </div>
 
-          <div className={`bg-[#0b2a5b] text-white rounded-3xl p-10 shadow-2xl shadow-[#0b2a5b] transition-all duration-1000 ${active ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
+          <div className={`bg-[#0b2a5b] text-white rounded-3xl p-10 shadow-2xl transition-all duration-1000 ${active ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
 
-            <h3 className="text-2xl  mb-6">
-              LEADING CYBERSECURITY EXCELLENCE
+            <h3 className="text-xl font-semibold mb-6">
+              Leading Cybersecurity Excellence
             </h3>
 
-            <p className="text-gray-200 mb-4 leading-relaxed ">
+            <p className="text-gray-200 mb-4 leading-relaxed">
               Codevirus Security is a company established in 2018, works in a collaborative form of company and leading Cyber Security Training Institute, situated in the heart of Uttar Pradesh – Lucknow. We offer modern day solutions for current cyber security needs and protection from emerging digital threats, as the world is encountering various cybercrimes with advancement of day to day technologies.
             </p>
 
@@ -105,23 +105,24 @@ const About = () => {
           </div>
         </div>
       </section>
-        
+
       {/* FEATURES */}
-      <section className="py-10 px-6 bg-[#f9fafc]">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-[#0b2a5b] mb-6">
-              Proactive Cybersecurity Operations
-            </h1>
-            <p className="text-lg text-slate-600 max-w-4xl mx-auto pb-10">
-              Our comprehensive approach to cybersecurity ensures your organization stays protected against evolving threats with cutting-edge technology and expert analysis.
-            </p>
-          </div>
+      <section className="py-14 px-6 bg-[#f9fafc]">
         <div className="max-w-7xl mx-auto text-center">
+
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#0b2a5b] mb-6">
+            Proactive Cybersecurity Operations
+          </h2>
+
+          <p className="text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+            Our comprehensive approach to cybersecurity ensures your organization stays protected against evolving threats with cutting-edge technology and expert analysis.
+          </p>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-3xl shadow-md shadow-[#0b2a5b] hover:shadow-xl hover:-translate-y-3 transition-all duration-500"
+                className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl hover:-translate-y-3 transition-all duration-500"
               >
                 <h3 className="font-semibold text-lg text-[#0b2a5b] mb-3">
                   {f.title}
@@ -143,9 +144,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-[#0b2a5b] text-white p-10 rounded-3xl shadow-xl hover:scale-105 transition duration-500">
+            <div className="bg-[#112f66] text-white p-10 rounded-3xl shadow-xl hover:scale-105 transition duration-500">
               <h3 className="text-xl font-semibold mb-4">
-                OUR MISSION
+                Our Mission
               </h3>
               <p className="leading-relaxed">
                 Our mission is to help organizations identify risks, defend critical infrastructure, and respond effectively to cyber threats by delivering practical cybersecurity consulting, managed security services, and continuous risk improvement aligned with business objectives.
@@ -173,7 +174,7 @@ const About = () => {
             {statsData.map((s, i) => (
               <div
                 key={i}
-                className="bg-[#f4f6fa] rounded-3xl p-10 shadow-md hover:shadow-xl shadow-[#0b2a5b] hover:-translate-y-2 transition-all duration-500"
+                className="bg-[#f4f6fa] rounded-3xl p-10 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
               >
                 <h3 className="text-4xl font-bold text-[#0b2a5b] mb-2">
                   {counts[i]}{s.suffix}
