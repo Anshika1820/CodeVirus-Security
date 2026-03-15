@@ -20,6 +20,8 @@ import iot_and_edge_security from "../assets/Photos/iot_and_edge_security.png";
 import it_security_audit from "../assets/Photos/it_security_audit.png";
 import forensic_investigation_and_audit from "../assets/Photos/forensic_investigation_and_audit.png";
 import networking_audit from "../assets/Photos/networking_audit.png";
+import network from "../assets/Photos/network.png";
+import soc from "../assets/Photos/soc.jpeg";
 export const servicesData = [
     {
         id: 1,
@@ -219,6 +221,24 @@ export const servicesData = [
         icon: "shield-check",
         features: ["Network architecture and segmentation review", "Switch and router configuration checks", "VLAN and access control validation", "Traffic flow and exposure analysis"],
         details: "Networks connect everything, and a small misconfiguration can expose the entire environment. A Networking Audit reviews how network devices, segments, and traffic flows are set up and whether they follow basic security and operational best practices. The audit focuses on real configurations running in the network, not just diagrams. This helps identify weak segmentation, unnecessary exposure, and design issues that affect both security and performance."
+    },
+    {
+        id: 23,
+        title: "Network Implementation Services",
+        image: network,
+        description: "Secure, scalable , and performance - driven network deployments built for modern       enterprises.",
+        icon: "shield-check",
+        features: ["Enterprise Network Architecture Design", "Secure LAN, WAN & Wireless Deployment", "Router, Switch & Firewall Implementation", "VLAN, ACL, NAT & Routing Configuration","Internal, External & DMZ Segmentation","High Availability & Redundancy Design","Data Center & Server Network Setup","Compliance-aligned Hardening & Validation"],
+        details: "Most network failures are caused not by hardware, but by poor design and rushed implementation. Our Network Implementation Services focus on building secure-by-design infrastructures aligned with industry best practices and compliance requirements. We design and deploy on-premise, cloud, and hybrid networks with a strong emphasis on segmentation, availability, and operational resilience. Every implementation is fully documented, auditable, and built to scale as your business grows."
+    },
+    {
+        id: 24,
+        title: "Network Assessment",
+        image: soc,
+        description: "SA structured evaluation of network infrastructure to identify security gaps, performance issues, and design weaknesses.",
+        icon: "shield-check",
+        features: ["Network topology & design review", "Router, switch & firewall configuration analysis", "VLAN, ACL & segmentation validation", "Exposure & misconfiguration identification"],
+        details: "Network Assessment helps organizations understand how their current network is built, how traffic flows, and where exposure exists. The assessment includes configuration reviews, segmentation validation, and access control checks to identify misconfigurations that may impact security or availability. The outcome is a clear view of network risks along with practical improvement areas—without disrupting ongoing business operations."
     },
 ];
 export default servicesData;
