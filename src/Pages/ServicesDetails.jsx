@@ -76,13 +76,13 @@ const ServiceDetail = () => {
         >
 
           {/* HEADER */}
-          <div className="bg-[#0b2a5b] px-6 py-10 sm:px-10 text-center text-white">
+          <div className="bg-slate-100 px-6 py-10 sm:px-10 text-center shadow-md shadow-[#0b2a5b]">
 
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 text-[#0b2a5b]">
               {service.title}
             </h1>
 
-            <p className="text-sm sm:text-lg max-w-3xl mx-auto text-white/90">
+            <p className="text-sm sm:text-lg max-w-3xl mx-auto text-black">
               {service.description}
             </p>
 
