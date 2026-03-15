@@ -46,7 +46,6 @@ const Services = () => {
     };
     return icons[iconName] || HiShieldCheck;
   };
-
   return (
     <div className=' bg-slate-100'>
 
