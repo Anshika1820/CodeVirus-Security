@@ -7,15 +7,17 @@ import logo2 from "../assets/Photos/logo2.png";
 
 const Footer = () => {
   const services = [
-    { title: "IoT & Edge Security", slug: "iot-edge-security" },
-    { title: "System Security Audit", slug: "system-security-audit" },
-    { title: "Aadhaar Security Audit", slug: "aadhaar-security-audit" },
-    { title: "Cloud Security", slug: "cloud-security" },
-    { title: "Network Security", slug: "network-security" },
-    { title: "Application Security", slug: "application-security" },
-    { title: "Vulnerability Assessment & Penetration Testing (VAPT)", slug: "vulnerability-assessment-penetration-testing-vapt" },
-    { title: "Security Operations Center (SOC)", slug: "security-operations-center-soc" },
-  ];
+  { id: 12, title: "Data Protection & Privacy" },
+  { id: 11, title: "Cloud Security" },
+  { id: 13, title: "Vulnerability Assessment & Penetration Testing (VAPT)" },
+  { id: 14, title: "Aadhaar Security Audit" },
+  { id: 17, title: "System Security Audit" },
+  { id: 18, title: "Digital Forensics" },
+  { id: 20, title: "IT Security Audit" },
+  { id: 19, title: "IoT Security" },
+  { id: 22, title: "Networking Audit" },
+  { id: 1, title: "Security Operations Center (SOC)" },
+];
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
@@ -121,7 +123,7 @@ const Footer = () => {
             <ul className="space-y-3 text-base text-gray-600">
               {services.map((s, i) => (
                 <li key={i}>
-                  <Link to={`/services?service=${s.slug}`} className="hover:text-[#071a36]">
+                  <Link to={`/services/${s.id}`} className="hover:text-[#071a36]">
                     {s.title}
                   </Link>
                 </li>
