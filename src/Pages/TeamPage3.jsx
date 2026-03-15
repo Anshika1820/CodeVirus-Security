@@ -10,7 +10,6 @@ export default function TeamPage3() {
       <section className="px-6 md:px-20 py-16 text-white">
         <div className="max-w-5xl mx-auto text-center">
 
-          {/* Highlight Button Style */}
           <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-lg">
             <h2 className="text-xs md:text-sm font-semibold tracking-widest uppercase">
               Our Executive Team
@@ -46,20 +45,11 @@ export default function TeamPage3() {
               Senior Security Analyst | SecOps
             </p>
 
-            {/* Unified Badge Style */}
+            {/* Unified Badge */}
             <div className="mt-6 flex justify-center gap-3 flex-wrap">
-              {[
-                "Core Security Team",
-                "12+ Years Experience",
-                "Security Operations Specialist",
-              ].map((item, index) => (
-                <span
-                  key={index}
-                  className="bg-[#0B1C2D] text-white text-xs md:text-sm px-5 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
-                >
-                  {item}
-                </span>
-              ))}
+              <span className="bg-[#0B1C2D] text-white text-xs md:text-sm px-5 py-2 rounded-full shadow-md">
+                Core Security Team
+              </span>
             </div>
           </div>
 
@@ -67,8 +57,7 @@ export default function TeamPage3() {
           <div className="mt-12 space-y-6 text-sm md:text-base text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
             <p>
               Dilip Singh is a Senior Security Analyst with 12+ years of extensive experience 
-              in cybersecurity operations, network security, vulnerability management, 
-              and enterprise IT security.
+              in cybersecurity operations, network security, vulnerability management, and enterprise IT security.
             </p>
             <p>
               He has led SOC operations, SIEM monitoring, endpoint security, 
@@ -111,17 +100,15 @@ export default function TeamPage3() {
 
           {/* Navigation Buttons */}
           <div className="mt-16 flex justify-center gap-6">
-            <Link
-             to="/tp2">
-            <button className="bg-gray-200 text-gray-800 px-8 py-3 text-sm rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
-              ← Previous
-            </button>
+            <Link to="/tp2">
+              <button className="bg-gray-200 text-gray-800 px-8 py-3 text-sm rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
+                ← Previous
+              </button>
             </Link>
-            <Link
-             to="/tp4">
-            <button className="bg-[#0B1C2D] text-white px-10 py-3 text-sm rounded-full hover:bg-[#102a44] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-              Next →
-            </button>
+            <Link to="/tp4">
+              <button className="bg-[#0B1C2D] text-white px-10 py-3 text-sm rounded-full hover:bg-[#102a44] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                Next →
+              </button>
             </Link>
           </div>
 
