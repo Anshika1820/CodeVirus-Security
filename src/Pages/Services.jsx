@@ -44,6 +44,7 @@ const Services = () => {
       'globe': HiGlobe,
       'database': HiDatabase
     };
+    
     return icons[iconName] || HiShieldCheck;
   };
   return (
