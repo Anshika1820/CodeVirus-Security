@@ -105,9 +105,17 @@ const About = () => {
           </div>
         </div>
       </section>
-
+        
       {/* FEATURES */}
-      <section className="py-28 px-6 bg-[#f9fafc]">
+      <section className="py-10 px-6 bg-[#f9fafc]">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-[#0b2a5b] mb-6">
+              Proactive Cybersecurity Operations
+            </h1>
+            <p className="text-lg text-slate-600 max-w-4xl mx-auto pb-10">
+              Our comprehensive approach to cybersecurity ensures your organization stays protected against evolving threats with cutting-edge technology and expert analysis.
+            </p>
+          </div>
         <div className="max-w-7xl mx-auto text-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f, i) => (
