@@ -50,8 +50,7 @@ export default function TeamPage5() {
             <div className="mt-6 flex justify-center gap-3 flex-wrap">
               {[
                 "Security Operations Team",
-                "2+ Years Experience",
-                "Defensive Cybersecurity Specialist",
+               
               ].map((item, index) => (
                 <span
                   key={index}
