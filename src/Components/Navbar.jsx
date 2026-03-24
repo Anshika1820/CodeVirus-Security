@@ -51,7 +51,6 @@ const Navbar = () => {
   };
 
   return (
-    
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
@@ -71,7 +70,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-6 lg:gap-8 mx-8 font-medium text-[#0b2a5b] whitespace-nowrap overflow-hidden">
+        <ul className="hidden md:flex gap-6 lg:gap-8 ml-8 lg:ml-12 font-medium text-[#0b2a5b] whitespace-nowrap">
           {menuItems.map((item) => (
             <li key={item.name}>
               <NavLink
@@ -101,17 +100,17 @@ const Navbar = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              className="pl-9 pr-3 py-1.5 w-40 rounded-full border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0b2a5b] text-sm"
+              className="pl-9 pr-3 py-1.5 w-60 rounded-full border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0b2a5b] text-sm"
             />
           </div>
 
           {/* Login */}
-          <NavLink to="/login">
+          {/* <NavLink to="/login">
             <button className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#0b2a5b] to-[#163d82] text-white font-semibold shadow-lg hover:scale-105 transition">
               <FaSignInAlt />
               Login
             </button>
-          </NavLink>
+          </NavLink> */}
 
           {/* Contact */}
           <NavLink to="/contact">
@@ -170,7 +169,7 @@ const Navbar = () => {
 
         {/* Buttons */}
         <div className="flex flex-col gap-3 pt-4">
-          <NavLink
+          {/* <NavLink
             to="/login"
             onClick={() => setOpen(false)}
           >
@@ -178,7 +177,7 @@ const Navbar = () => {
               <FaSignInAlt />
               Login
             </button>
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/contact"
@@ -192,10 +191,8 @@ const Navbar = () => {
         </div>
 
       </div>
-    
     )}
     </header>
-    
   );
 };
 
